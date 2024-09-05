@@ -80,5 +80,9 @@ function respostaSelecionada (opcaoSelecionda){
     mostraPergunta();
 }
 
-function respostaSelecionada()
- 
+function respostaSelecionada(){
+    caixaPerguntas.textContent = "resumido...";
+    textoResultado.textContent = historiaFinal;
+    caixaAlternativas.text.Content = "";
+]
+    mostraPergunta(); 
