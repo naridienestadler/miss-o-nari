@@ -58,5 +58,27 @@ function mostraPergunta(){
     return.
   } 
   prguntaAtual = pergunta[atual];
-  cixaPerguntas.textContent 
+  cixaPerguntas.textContent = perguntaAtual.enunciado
+  caixaAlternativas.textContent = "";
+  textoResultado.textContent = "";
+  mostraAlternativas();
+}
+
+function mostraAlternativas(){
+    for (conts alternativas of perguntaAtual.alternativas){
+        const botaoAltrnativa = document.createElement("button");
+        botaoAlternativa.textContent = alternativa.texto;
+        botaoAltrnativa.addEventListener("click",()=>
+ respostaSelecionada (alert));
+        caixaAlternativas.appendChild(botaoAltrnativa);
+    }
+}
+function respostaSelecionada (opcaoSelecionda){
+    const afirmacao = opcaoSelecionda.afirmacao;
+    histiraFinal += afirmacao+" ";
+    atual++
+    mostraPergunta();
+}
+
+function respostaSelecionada()
  
